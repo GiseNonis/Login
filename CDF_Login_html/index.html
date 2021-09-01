@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn CDF</title>
+    
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!--- CONTENTS --->
+    <div class="form">
+        <div>
+            <div class="form-container">
+                <img class="img-logo" src="img/LogoCasaLeconteFponfoBlanco.svg" alt="Logo Casa Leconte">
+                
+                <h1 class="title">¡Bienvenidos a <span class="title-CDF">CDF</span>!</h1>
+            </div>
+
+            <form action="" class="form-box">
+                <h2 class="form_title">Iniciar sesión</h2>
+
+                <div class="txt_field">
+                    <input type="text" class="form_input" placeholder=" ">
+                    <label for="" class="form_label">Correo electrónico</label>
+                </div>
+                
+                <div class="txt_field">
+                    <input type="password" class="form_input" placeholder=" " id="password">
+                    <label for="" class="form_label">Contraseña</label>
+                    <span>
+                        <i class="fa fa-eye" aria-hidden="true" id="eye" onclick="toggle()"></i>
+                    </span>
+                </div>
+                
+                <input type="submit" class="form_buttom" value="Entrar">
+                
+                <div class="forgot_password">¿Olvidaste tu contraseña? <a href="#">Pedir Aquí.</a></div>
+            </form>
+        </div>
+    </div>
+    <!-- JS -->
+    <script>
+        var state= false;
+        function toggle(){
+            if(state){
+                document.getElementById("password").setAttribute("type","password");
+                document.getElementById("eye").style.color='#7a797e';
+                state = false;
+            }
+            else{
+                document.getElementById("password").setAttribute("type","text");
+                document.getElementById("eye").style.color='#017374';
+                state = true;
+            }
+        }
+    </script>
+</body>
+</html>
